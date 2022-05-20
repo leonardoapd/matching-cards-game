@@ -1,0 +1,106 @@
+header {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+    header {
+        margin-top: 1rem;
+    }
+
+    body .card-container {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 3rem 0.2rem;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+    }
+
+    .card {
+        display: inline-block;
+        margin-right: 1rem;
+        overflow: hidden;
+    }
+
+    body .card:hover {
+        transform: none;
+    }
+
+    body .card:active {
+        transform: translate(.40rem, .40rem);
+        box-shadow: none;
+        background-color: #f4f4f0;
+    }
+
+}
+
+@media only screen and (min-width: 601px) {
+    .card-container {
+        height: 70vh;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(250px, 1fr));
+        place-items: center;
+    }
+
+    .card:hover {
+        transform: translate(-.40rem, -.40rem);
+        box-shadow: 0.40rem 0.40rem 0 #000;
+        border-radius: 1.4rem;
+        background-color: rgba(0, 0, 0, 1);
+        cursor: pointer;
+    }
+
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0.4rem 0.1rem 0 rgba(0, 0, 0, 0.2);
+    transition: all .30s ease-out;
+    border-radius: 1.4rem;
+}
+
+.card img {
+    width: 240px;
+    height: auto;
+}
+
+.modal {
+    width: 360px;
+    border-radius: 0.5rem;
+    margin: auto;
+    padding: 1rem;
+}
+
+.modal::backdrop {
+    background-color: rgba(145, 97, 250, 0.2);
+}
+
+.modal i {
+    position: relative;
+    right: -90%;
+    color: red;
+}
+
+.modal i:hover {
+    cursor: pointer;
+}
+
+.modal-content img {
+    width: 90px;
+}
+
+.score {
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.span-wins {
+    color: green;
+
+}
+
+.span-losses {
+    color: red;
+}

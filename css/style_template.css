@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;700;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Darker Grotesque', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: #f4f4f0;
+    /* Now 10px = 1rem! */
+    /* font-size: 62.5%; */
+    scroll-behavior: smooth;
+}
+
+.titles {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #6562CF;
+    margin-bottom: 1rem;
+}
+
+.flex {
+    display: flex;
+    gap: 1rem;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.flex-column-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-inputs {
+    margin-top: 0.5rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid #000;
+    border-radius: 0.30rem;
+    width: 100%;
+    caret-color: cornflowerblue;
+    box-shadow: 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.2);
+}
+
+.form-labels {
+    width: 100%;
+    margin-top: 0.25rem;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 0.30rem;
+    margin: 0.5rem 0 2rem 0;
+}
+
+/* The properties of the buttons are changed to be bigger and wide  */
+
+.button {
+    text-transform: uppercase;
+    font-weight: 700;
+    box-shadow: 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.2);
+    transition: all .14s ease-out;
+    padding: 0.75rem 1rem;
+    /* width: 50%; */
+}
+
+.button:hover {
+    box-shadow: 0.40rem 0.40rem 0 #000;
+    transform: translate(-.40rem, -.40rem);
+}
+
+.button_sub {
+    color: #fff;
+    background-color: #6562CF;
+    border-color: #000;
+    border-width: 1px;
+}
+
+/* An animation is applied once the buttons are hover */
+
+.button_res {
+    border-color: #000;
+    border-width: 1px;
+}
