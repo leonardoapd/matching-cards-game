@@ -48,8 +48,8 @@ function getCardClicked(card) {
         <div class="flex">
             <img src="images/${computerCard}.png" alt="${card}">
             <div>
-                <p>Computer choose ${computerCard}.</p>
-                <p class="titles">Congratulations!!</p>
+                <p>Computer chose ${computerCard}.</p>
+                <p class="titles">You matched the cards!!</p>
                 <p>You <span class="span-wins score">${wins}</span> vs <span class="span-losses score">${losses}</span>Computer</p>
             </div>
         </div>`;
@@ -62,7 +62,7 @@ function getCardClicked(card) {
         <div class="flex">
             <img src="images/${computerCard}.png" alt="${card}">
             <div>
-                <p>Computer choose ${computerCard}.</p>
+                <p>Computer chose ${computerCard}.</p>
                 <p class="titles">Keep trying!</p>
                 <p>You <span class="span-wins score">${wins}</span> vs  <span class="span-losses score">${losses}</span> Computer</p>
             </div>
@@ -75,6 +75,7 @@ function getCardClicked(card) {
 
 //Function to get a random number
 function getRandomInt(min, max) {
+    //Using Math.random() to get a random number between min and max
     return Math.floor(Math.random() * (max - min)) + min;
 }
 
@@ -83,7 +84,7 @@ closeModal.onclick = () => {
     modal.close();
 }
 
-//Function to close the modal when the user clicks outside of it
+//Function to close the modal when the user clicks outside of it listening to the click event
 window.onclick = (event) => {
     if (event.target == modal) {
         modal.close();
@@ -98,6 +99,16 @@ function resetGame() {
 
     modalContent.innerHTML = `
     <h1 class="titles">Game reset!</h1>
+    <div>
+        <p>You <span class="span-wins score">${wins}</span> vs  <span class="span-losses score">${losses}</span> Computer</p>
+    </div>`;
+    modal.showModal();
+}
+
+//Function to show the score
+function showScore() {
+    modalContent.innerHTML = `
+    <h1 class="titles">The score is:</h1>
     <div>
         <p>You <span class="span-wins score">${wins}</span> vs  <span class="span-losses score">${losses}</span> Computer</p>
     </div>`;

@@ -1,5 +1,13 @@
+/* A template of CSS styles is made to maintain a design flow and reuse code. */
+/* 
+    Google Fonts:
+    Darker Grotesque: https://fonts.google.com/specimen/Darker+Grotesque
+ */
 @import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;700;900&display=swap');
 
+/* 
+    Global Styles
+ */
 * {
     box-sizing: border-box;
     font-family: 'Darker Grotesque', sans-serif;
@@ -14,6 +22,10 @@ html {
     scroll-behavior: smooth;
 }
 
+/* 
+    Header
+    Styles for the titles
+ */
 .titles {
     font-size: 2rem;
     font-weight: 700;
@@ -21,6 +33,19 @@ html {
     margin-bottom: 1rem;
 }
 
+/*
+    Styles for the subtitle
+ */
+.subtitles {
+    font-size: 1rem;
+    font-weight: 600;
+    color: green;
+    margin-bottom: 0.5rem;
+}
+
+/* 
+    Styles for containers
+ */
 .flex {
     display: flex;
     gap: 1rem;
@@ -44,6 +69,10 @@ html {
     justify-content: center;
     align-items: center;
 }
+
+/*
+    Styles for the inputs, labels, and buttons
+*/
 
 .form-inputs {
     margin-top: 0.5rem;
